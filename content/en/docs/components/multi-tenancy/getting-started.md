@@ -113,14 +113,14 @@ Kubeflow {{% kf-latest-version %}} provides automatic profile creation:
   - The Kubeflow deployment process automatically creates a profile for the user
     performing the deployment. When the user access the Kubeflow central dashboard
     they see their profile in the dropdown list.
-  - The automatic profile creation can be disabled as part of the deployment by setting the registration-flow env variable to false. And an admin can manually create profiles per user or per project and add collaborators through YAML files.
+  - The automatic profile creation can be enabled as part of the deployment by setting the registration-flow env variable to true. And an admin can manually create profiles per user or per project and add collaborators through YAML files.
    Modify the kustomize/centraldashboard/base/parama.env to set the registration variable to false
 
    ```
    clusterDomain=cluster.local
    userid-header=kubeflow-userid
    userid-prefix=
-   registration-flow=false
+   registration-flow=true
    ```
 
   - When an authenticated user logs into the system and visits the central
